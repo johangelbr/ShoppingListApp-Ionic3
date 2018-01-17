@@ -52,8 +52,10 @@ url('../assets/fonts/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular
 // iOS only Sass variables can go here
 
 
-
-
+$toast-ios-background : #484848;
+$toast-md-background : #484848;
+$text-input-highlight-color-valid: #212121;
+$text-input-placeholder-color : #ffbcae;
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
