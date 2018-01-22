@@ -1,0 +1,65 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+      <!-- <ion-buttons start>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons> -->
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="onSignup(f)" >
+    <ion-list>
+      <h2 class="headertext">Register</h2>
+        <ion-item>
+            <ion-label stacked>Complete Name</ion-label>
+            <ion-input
+            type="text"
+            ngModel
+            name="name"
+            required
+            placeholder="Example Last"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label stacked>Username</ion-label>
+              <ion-input
+              type="text"
+              ngModel
+              name="username"
+              required
+              placeholder="exampleuser01"></ion-input>
+            </ion-item>
+      <ion-item>
+        <ion-label stacked>E-Mail</ion-label>
+        <ion-input
+        type="email"
+        ngModel
+        name="email"
+        required
+        placeholder="example@example.com"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label stacked>Password</ion-label>
+          <ion-input
+          type="password"
+          ngModel
+          name="password"
+          required
+          [minlength]="6"
+          placeholder="Must have 6 characters"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button block type="submit" [disabled]="!f.valid">Signup</button>
+  </form>
+</ion-content>
